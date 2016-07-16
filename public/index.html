@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JSExpert Reminder: не забудь самое важное.</title>
+</head>
+
+<body ng-app="catalogApp">
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">JS Expert Reminder</a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li><a ui-sref="home">Главная</a></li>
+            <li><a ui-sref="list">Список задач</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+   
+   <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-center">JSExperts 2016</p>
+      </div>
+    </footer>
+    
+
+
+    <script src="dist/angular.min.js"></script>
+    <script src="dist/angular-ui-router.min.js"></script>
+<!--    <script src="dist/debug_router.js"></script>-->
+    <script src="app.js"></script>
+    <script src="components/list/taskListService.js"></script>
+    <script src="components/list/fullListController.js"></script>
+    <script src="components/list/listController.js"></script>
+    
+    <script src="components/home/taskService.js"></script>
+    <script src="components/home/taskController.js"></script>
+
+    <script src="components/add/addController.js"></script>
+    <script src="components/add/addService.js"></script>
+
+    <script src="components/edit/editController.js"></script>
+    <script src="components/edit/editService.js"></script>
+    
+    <script src="components/statistic/statisticController.js"></script>
+
+
+</body>
+</html>

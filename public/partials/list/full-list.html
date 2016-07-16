@@ -1,0 +1,31 @@
+<h3 class="">Все задачи</h3>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <td>Название</td>
+            <td>Описание</td>
+            <td>Статус</td>
+            <td>Срочность</td>
+        </tr>
+    </thead>
+    <tbody>
+
+    <tr class="full-list" ui-sref="edit({id: task._id})" ng-repeat="task in fl.tasks">
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ fl.getStatus(task.completed)}}</td>
+        <td>
+            <span class="label" 
+            ng-class="{
+               'label-danger': fl.isDanger(task.urgency),
+               'label-success': fl.isSuccess(task.urgency),
+               'label-default': fl.isDefault(task.urgency)
+               }">
+                {{ fl.getEmergency(task.urgency) }}
+                </span>
+        </td>
+    </tr>
+
+    </tbody>
+</table>  

@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-sm-9">
+       
+       <div class="row" ng-show="lst.msg">
+           <div class="col-sm-12">
+               <div class="bg-success msg"><span>{{lst.msg}}</span></div>
+           </div>
+        </div>
+       
+        <div class="row">
+            <div class="col-sm-12">
+                <a ui-sref="add" type="button" class="btn btn-success pull-right">Создать +</a>
+            </div>
+        </div>
+       <div ui-view="columnOne"></div>
+        
+    </div>
+    
+    
+    <div class="col-sm-3">
+       <div class="stats" ui-view="columnTwo"></div> 
+    </div>
+
+    
+</div>
